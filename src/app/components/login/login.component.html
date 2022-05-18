@@ -1,0 +1,31 @@
+<img src="../../../assets/images/audaceslogo.png" alt="logo" class="logo">
+<div class="login-container">
+    <h1>
+        Sign in
+    </h1>
+    <span>Insira suas credenciais para acessar sua conta</span>
+    <form (ngSubmit)="onSubmit()" [formGroup]="formLogin" #formDir="ngForm">
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="email"
+                placeholder="Informe seu e-mail">
+        </div>
+        <div *ngIf="email.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="email.errors?.['required']">Insira um e-mail!</p>
+            <p *ngIf="email.errors?.['email']">Insira um e-mail válido!</p>
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" formControlName="password"
+                placeholder="Informe sua senha">
+        </div>
+        <div *ngIf = "password.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="password.errors?.['required']">Insira uma senha!</p>
+        </div>
+        <div *ngIf = "password.hasError('minlength')" class="validation-error">
+            <p>Sua senha deve conter 6 ou mais caracteres.</p>
+        </div>
+        <button type="submit" class="btn-form">Entrar</button>
+    </form>
+</div>
+<div class="footer-password">
+    <span>Esqueceu sua senha? <a routerLink="/forgot-password">Redefinir senha</a></span>
+</div>

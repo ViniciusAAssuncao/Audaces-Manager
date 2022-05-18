@@ -1,0 +1,70 @@
+<app-menu></app-menu>
+<div>
+    <div class="create-container">
+        <div class="header-container">
+            <p>Criar Modelo</p>
+        </div>
+        <form (ngSubmit)="onSubmit()" [formGroup]="formCreate" #formDir="ngForm">
+            <div class="form-one">
+                <input type="text" placeholder="Nome do modelo" class="input-form" formControlName="nome">
+                <div *ngIf="nome && nome.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="nome.errors?.['required']">Insira um nome!</p>
+                </div>
+                <select class="input-select" formControlName="tipo">
+                    <option value="" disabled selected>Tipo de modelo</option>
+                    <option value="bermuda">Bermuda</option>
+                    <option value="biquíni">Biquíni</option>
+                    <option value="bolsa">Bolsa</option>
+                    <option value="boné">Boné</option>
+                    <option value="calça">Calça</option>
+                    <option value="calçados">Calçados</option>
+                    <option value="camisa">Camisa</option>
+                    <option value="chapéu">Chapéu</option>
+                    <option value="saia">Saia</option>
+                </select>
+                <div *ngIf="tipo && tipo.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="tipo.errors?.['required']">Insira um tipo de modelo!</p>
+                </div>
+                <label class="label">Possui bordado?</label>
+                <div class="radio-container">
+                    <input type="radio" value="Sim" formControlName="bordado" checked />
+                    <label>Sim</label>
+                    <input type="radio" value="Não" formControlName="bordado" />
+                    <label>Não</label>
+                </div>
+                <div *ngIf="bordado && bordado.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="bordado.errors?.['required']">Marque uma opção!</p>
+                </div>
+            </div>
+            <div class="form-two" (ngSubmit)="onSubmit()" [formGroup]="formCreate" #formDir="ngForm">
+                <input type="text" placeholder="Responsável pelo modelo" class="input-form"
+                    formControlName="responsavel">
+                <div *ngIf="responsavel && responsavel.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="responsavel.errors?.['required']">Insira um responsável!</p>
+                </div>
+                <select class="input-form" formControlName="colecao">
+                    <option value="" disabled selected>Selecionar coleção</option>
+                    <option *ngFor="let collection of collections" [ngValue]="collection">{{collection}}</option>
+                </select>
+                <div *ngIf="colecao && colecao.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="colecao.errors?.['required']">Insira uma coleção relacionada!</p>
+                </div>
+                <label class="label">Possui estampa?</label>
+                <div class="radio-container-two">
+                    <input type="radio" value="Sim" formControlName="estampa" checked />
+                    <label>Sim</label>
+                    <input type="radio" value="Não" formControlName="estampa" />
+                    <label>Não</label>
+                </div>
+                <div *ngIf="estampa && estampa.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="estampa.errors?.['required']">Marque uma opção!</p>
+                </div>
+            </div>
+            <div class="footer-buttons">
+                <a routerLink="/models"><button class="btn-cancel">Cancelar</button></a>
+                <button type="submit" class="btn-create">Salvar</button>
+            </div>
+        </form>
+        <img src="../../../assets/images/dresslogo.png" alt="Clothing">
+    </div>
+</div>

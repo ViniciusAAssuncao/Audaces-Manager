@@ -1,0 +1,27 @@
+<app-menu></app-menu>
+<div>
+    <div class="create-container">
+        <div class="header-container">
+            <p>Editar Coleção</p>
+        </div>
+        <form (ngSubmit)="onSubmit()" [formGroup]="formEdit">
+            <div class="form-one">
+                <input type="text" placeholder="Nome da Coleção" class="input-form" formControlName="nome">
+                <input type="text" placeholder="Para qual estação" class="input-form" formControlName="estacao">
+                <input type="number" placeholder="Qual é o orçamento desta coleção?" class="input-form"
+                    formControlName="orcamento">
+            </div>
+            <div class="form-two">
+                <input type="text" placeholder="Responsável pela coleção" class="input-form" formControlName="responsavel">
+                <input type="text" placeholder="Para qual marca você está criando?" class="input-form"
+                    formControlName="marca">
+                <input type="number" placeholder="Ano de lançamento" class="input-form" formControlName="lancamento">
+            </div>
+            <div class="footer-buttons">
+                <a routerLink="/collections"><button class="btn-cancel">Cancelar</button></a>
+                <button type="submit" class="btn-create">Salvar</button>
+            </div>
+        </form>
+        <img src="../../../assets/images/dresslogo.png" alt="Clothing">
+    </div>
+</div>

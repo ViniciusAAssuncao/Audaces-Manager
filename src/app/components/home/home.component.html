@@ -1,0 +1,42 @@
+<app-menu></app-menu>
+<div>
+    <div class="home-container">
+        <div class="header-container">
+            <p><strong>Bem vindo</strong>, Yan</p>
+            <span class="subheader">Acompanhe a visão geral de suas coleções</span>
+        </div>
+        <div class="cards-container">
+            <div class="card-1">
+                <h1>Coleções</h1>
+                <h2>{{ amount }}</h2>
+            </div>
+            <div class="card-2">
+                <h1>Modelos</h1>
+                <h2>{{ modelsNum }}</h2>
+            </div>
+            <div class="card-3">
+                <h1>Orçamento médio por Coleção</h1>
+                <h2>{{ localeAverage(average) }}</h2>
+            </div>
+        </div>
+        <h1 class="table-title">Maiores Orçamentos</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ColeçãoID</th>
+                    <th>Nome da Coleção</th>
+                    <th>Orçamento</th>
+                    <th>Responsável</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of data">
+                    <td class="id-text">00{{ data.id }}</td>
+                    <td>{{ data.nome }}</td>
+                    <td>{{ localeAverage(data.orcamento) }}</td>
+                    <td>{{ data.responsavel }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

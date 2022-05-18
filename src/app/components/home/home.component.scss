@@ -1,0 +1,141 @@
+div {
+    width: 84%;
+    height: 100%;
+    display: flex;
+    background: #FEFEFE;
+}
+
+.home-container {
+    position: absolute;
+    left: 216px;
+    top: 0px;
+    height: 820px;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+}
+
+.header-container>p {
+    font-size: 24px;
+    color: #2C2C2C;
+}
+
+.subheader {
+    padding-top: 5px;
+    color: #989898;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    padding-top: 185px;
+    user-select: none;
+}
+
+.card-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+    gap: 13px;
+    position: absolute;
+    width: 245px;
+    height: 80px;
+    left: 85px;
+    background: #EBF0FA;
+    border-radius: 6px;
+}
+
+.card-1>h1 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #2B2C33;
+}
+
+.card-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+    gap: 13px;
+    position: absolute;
+    width: 245px;
+    height: 80px;
+    left: 360px;
+    background: #EBF0FA;
+    border-radius: 6px;
+}
+
+.card-2>h1 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #2B2C33;
+}
+
+.card-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+    gap: 13px;
+    position: absolute;
+    height: 80px;
+    width: 245px;
+    left: 635px;
+    background: #EBF0FA;
+    border-radius: 6px;
+}
+
+.card-3>h1 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #2B2C33;
+}
+
+.table-title {
+    position: absolute;
+    width: 242px;
+    height: 29px;
+    left: 85px;
+    top: 320px;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #2C2C2C;
+    user-select: none;
+}
+
+table {
+    position: absolute;
+    left: 80px;
+    top: 385px;
+    width: 850px;
+    text-align: center;
+}
+
+table>tbody>tr {
+    opacity: 0.6;
+    border: 1.5px solid #9395A3;
+}
+
+
+table>tbody>tr>td {
+    padding: 20px;
+}
+
+.id-text {
+    font-weight: 600;
+    font-size: 15px;
+    color: #2C2C2C;
+}

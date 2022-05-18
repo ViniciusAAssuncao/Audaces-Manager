@@ -1,0 +1,27 @@
+<app-menu></app-menu>
+<div>
+    <div class="home-container">
+        <div class="header-container">
+            <p>Modelos</p>
+            <a routerLink="/create-models"><button class="create-collection">Criar modelo</button></a>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ModeloID</th>
+                    <th>Nome do Modelo</th>
+                    <th>Coleção</th>
+                    <th>Responsável</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let model of models$ | async" (click)="onEdit(model.id)">
+                    <td class="id-text">00{{ model.id }}</td>
+                    <td class="td-normal">{{ model.nome }}</td>
+                    <td class="td-normal">{{ model.colecao }}</td>
+                    <td class="td-normal">{{ model.responsavel }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

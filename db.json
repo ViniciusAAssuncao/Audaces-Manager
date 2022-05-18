@@ -1,0 +1,114 @@
+{
+  "modelos": [
+    {
+      "id": 1,
+      "nome": "Frühling in Paris",
+      "responsavel": "Till Lindemaan",
+      "tipo": "bolsa",
+      "colecao": "Rammstein",
+      "bordado": "Sim",
+      "estampa": "Não"
+    },
+    {
+      "id": 2,
+      "nome": "Lilac Fashion",
+      "responsavel": "Pamylla Ostermaan",
+      "tipo": "camisa",
+      "colecao": "Doçuras em Berlim",
+      "bordado": "Sim",
+      "estampa": "Sim"
+    },
+    {
+      "nome": "Fleur-de-lis",
+      "responsavel": "Santo Agostinho",
+      "tipo": "chapéu",
+      "colecao": "Amor em Paris",
+      "bordado": "Sim",
+      "estampa": "Não",
+      "id": 3
+    },
+    {
+      "nome": "Passione a Roma",
+      "responsavel": "Claudio Grando",
+      "tipo": "bermuda",
+      "colecao": "Mein Teil",
+      "bordado": "Não",
+      "estampa": "Não",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "nome": "Amor tropical",
+      "responsavel": "Fernando",
+      "tipo": "boné",
+      "colecao": "Ferrari Charmosa",
+      "bordado": "Não",
+      "estampa": "Não"
+    }
+  ],
+  "colecoes": [
+    {
+      "id": 1,
+      "nome": "Uma bela volta em Cracóvia",
+      "estacao": "Outono",
+      "orcamento": 6912,
+      "responsavel": "Nills Gatllin",
+      "marca": "Fhinyth",
+      "lancamento": 2023
+    },
+    {
+      "id": 2,
+      "nome": "Doçuras em Berlim",
+      "estacao": "Dezembro",
+      "orcamento": 3612,
+      "responsavel": "Mark Indegaard",
+      "marca": "Puma",
+      "lancamento": 2022
+    },
+    {
+      "nome": "Ferrari Charmosa",
+      "estacao": "Inverno",
+      "orcamento": 5557,
+      "responsavel": "Yan Esteves",
+      "marca": "Ferrari",
+      "lancamento": 2023,
+      "id": 3
+    },
+    {
+      "nome": "Amor em Paris",
+      "estacao": "Outono",
+      "orcamento": 9875,
+      "responsavel": "Pamylla Ostermaan",
+      "marca": "Dolce Gabbana",
+      "lancamento": 2025,
+      "id": 4
+    },
+    {
+      "id": 5,
+      "nome": "Rammstein",
+      "estacao": "Inverno",
+      "orcamento": 16200,
+      "responsavel": "Till Lindemaan",
+      "marca": "Supreme",
+      "lancamento": 2027
+    },
+    {
+      "id": 6,
+      "nome": "Mein Teil",
+      "estacao": "Verão",
+      "orcamento": 10000,
+      "responsavel": "Richard Kruspe",
+      "marca": "Rammstein",
+      "lancamento": 2025
+    },
+    {
+      "nome": "Pitágoras Winter",
+      "estacao": "Inverno",
+      "orcamento": 25000,
+      "responsavel": "Vinicius Assunção",
+      "marca": "Serapis Model",
+      "lancamento": 2025,
+      "id": 7
+    }
+  ]
+}

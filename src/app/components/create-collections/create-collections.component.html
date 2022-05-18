@@ -1,0 +1,45 @@
+<app-menu></app-menu>
+<div>
+    <div class="create-container">
+        <div class="header-container">
+            <p>Criar Coleção</p>
+        </div>
+        <form (ngSubmit)="onSubmit()" [formGroup]="formCreate" #formDir="ngForm">
+            <div class="form-one">
+                <input type="text" placeholder="Nome da Coleção" class="input-form" formControlName="nome">
+                <div *ngIf="nome && nome.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="nome.errors?.['required']">Insira um nome!</p>
+                </div>
+                <input type="text" placeholder="Para qual estação" class="input-form" formControlName="estacao">
+                <div *ngIf="estacao && estacao.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="estacao.errors?.['required']">Insira uma estação!</p>
+                </div>
+                <input type="number" placeholder="Qual é o orçamento desta coleção?" class="input-form"
+                    formControlName="orcamento">
+                <div *ngIf="orcamento && orcamento.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="orcamento.errors?.['required']">Insira um orçamento!</p>
+                </div>
+            </div>
+            <div class="form-two" (ngSubmit)="onSubmit()" [formGroup]="formCreate" #formDir="ngForm">
+                <input type="text" placeholder="Responsável pela coleção" class="input-form" formControlName="responsavel">
+                <div *ngIf="responsavel && responsavel.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="responsavel.errors?.['required']">Insira um responsável!</p>
+                </div>
+                <input type="text" placeholder="Para qual marca você está criando?" class="input-form"
+                    formControlName="marca">
+                <div *ngIf="marca && marca.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="marca.errors?.['required']">Insira uma marca!</p>
+                </div>
+                <input type="number" placeholder="Ano de lançamento" class="input-form" formControlName="lancamento">
+                <div *ngIf="lancamento && lancamento.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="lancamento.errors?.['required']">Insira um ano!</p>
+                </div>
+            </div>
+            <div class="footer-buttons">
+                <a routerLink="/collections"><button class="btn-cancel">Cancelar</button></a>
+                <button type="submit" class="btn-create">Salvar</button>
+            </div>
+        </form>
+        <img src="../../../assets/images/dresslogo.png" alt="Clothing">
+    </div>
+</div>

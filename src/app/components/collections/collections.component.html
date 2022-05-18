@@ -1,0 +1,27 @@
+<app-menu></app-menu>
+<div>
+    <div class="home-container">
+        <div class="header-container">
+            <p>Coleções</p>
+            <a routerLink="/create-collection"><button class="create-collection">Criar coleção</button></a>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ColeçãoID</th>
+                    <th>Nome da Coleção</th>
+                    <th>Estação e Lançamento</th>
+                    <th>Responsável</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let collection of collections$ | async" (click)="onEdit(collection.id)">
+                    <td class="id-text">00{{ collection.id }}</td>
+                    <td class="td-normal">{{ collection.nome }}</td>
+                    <td class="td-normal">{{ collection.estacao }} {{ collection.lancamento }}</td>
+                    <td class="td-normal">{{ collection.responsavel }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
